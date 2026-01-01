@@ -1,12 +1,13 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
+import { TermsModal } from "@/components/terms-modal"
 
 export function FooterWaitlist() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [showTerms, setShowTerms] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -23,7 +24,7 @@ export function FooterWaitlist() {
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
             005 — Join The Movement
           </span>
-          <h2 className="font-serif text-4xl md:text-6xl mt-4">GET ON THE LIST.</h2>
+          <h2 className="font-serif text-4xl md:text-6xl mt-4">JOIN THE MOVEMENT</h2>
         </div>
 
         {!submitted ? (
@@ -52,11 +53,38 @@ export function FooterWaitlist() {
         )}
       </div>
 
+      {/* Legal Links Bar */}
+      <div className="border-t border-foreground/10 px-6 py-4 md:px-12 flex justify-center md:justify-start gap-6 bg-foreground/5">
+        <button 
+          onClick={() => setShowTerms(true)}
+          className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Terms & Conditions
+        </button>
+        <button 
+          onClick={() => setShowTerms(true)}
+          className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Liability Waiver
+        </button>
+        <button 
+          onClick={() => setShowTerms(true)}
+          className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Privacy Policy
+        </button>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t-2 border-foreground p-6 md:p-12 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          © 2025 RocketArm.org — All Rights Reserved
-        </p>
+        <div className="text-center md:text-left">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">
+            Contact: <a href="mailto:info@rocketarm.org" className="text-accent hover:underline">info@rocketarm.org</a>
+          </p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            © 2025 RocketArm.org — All Rights Reserved
+          </p>
+        </div>
         <div className="flex items-center gap-8">
           <a href="#" className="font-mono text-[10px] uppercase tracking-[0.2em] hover:text-accent transition-colors">
             Instagram
@@ -69,6 +97,12 @@ export function FooterWaitlist() {
           </a>
         </div>
       </div>
+
+      <TermsModal 
+        isOpen={showTerms} 
+        onClose={() => setShowTerms(false)} 
+        // No Agree action needed for footer reviews
+      />
     </footer>
   )
 }

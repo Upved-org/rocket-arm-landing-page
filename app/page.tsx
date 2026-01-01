@@ -1,10 +1,12 @@
 import { TickerTape } from "@/components/ticker-tape"
 import { HeroSection } from "@/components/hero-section"
-import { CompetitionSection } from "@/components/competition-section"
+import { ChallengeSection } from "@/components/competition-section"
+import { TicketRegistration } from "@/components/ticket-registration"
+import { PrizePool } from "@/components/prize-pool"
 import { HardwareSection } from "@/components/hardware-section"
 import { TourSection } from "@/components/tour-section"
 import { GoalSection } from "@/components/goal-section"
-import { SocialMediaSection } from "@/components/social-media-section"
+import { SocialFeed } from "@/components/social-feed"
 import { FooterWaitlist } from "@/components/footer-waitlist"
 
 export default function Home() {
@@ -12,11 +14,13 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <TickerTape />
       <HeroSection />
-      <CompetitionSection />
+      <ChallengeSection />
+      <TicketRegistration />
+      <PrizePool />
       <HardwareSection />
       <TourSection />
       <GoalSection />
-      <SocialMediaSection />
+      <SocialFeed />
       <FooterWaitlist />
     </main>
   )
