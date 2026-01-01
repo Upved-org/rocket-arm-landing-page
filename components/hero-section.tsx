@@ -53,9 +53,12 @@ export function HeroSection() {
         </h1>
       </div>
 
-      <button className="absolute bottom-12 right-12 md:bottom-20 md:right-20 bg-accent text-accent-foreground font-mono text-sm md:text-base uppercase tracking-widest px-8 py-4 md:px-10 md:py-5 border-2 border-foreground rotate-[-8deg] hover:rotate-0 transition-transform duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+      <a 
+        href="#competition"
+        className="absolute bottom-12 right-12 md:bottom-20 md:right-20 bg-accent text-accent-foreground font-mono text-sm md:text-base uppercase tracking-widest px-8 py-4 md:px-10 md:py-5 border-2 border-foreground rotate-[-8deg] hover:rotate-0 transition-transform duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+      >
         Enter
-      </button>
+      </a>
 
       {/* Small floating tag */}
       <div className="absolute top-12 left-8 font-semibold font-mono text-md uppercase tracking-[0.3em] text-white z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
