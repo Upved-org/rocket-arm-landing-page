@@ -1,13 +1,13 @@
 export function TickerTape() {
   const stats = [
-    "CURRENT WORLD RECORD: 164.042 FT",
-    "EST. 2025 — NYC SF MIAMI",
+    "SPEED RECORD: 127.4 MPH",
+    "HEIGHT RECORD: 143.11 M",
+    "DUAL CHALLENGE — NYC SF MIAMI",
     "ROCKETARM.ORG",
-    "HIGHEST THROW BY HUMAN",
-    "CURRENT WORLD RECORD: 50 M",
-    "EST. 2025 — NYC SF MIAMI",
-    "ROCKETARM.ORG",
-    "HIGHEST THROW BY HUMAN",
+    "MEASURE YOUR THROW",
+    "BUY THE BALL",
+    "SPEED RECORD: 127.4 MPH",
+    "HEIGHT RECORD: 143.11 M",
   ]
 
   return (

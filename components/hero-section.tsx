@@ -55,9 +55,23 @@ export function HeroSection() {
 
       <a 
         href="#challenge"
-        className="absolute bottom-12 right-12 md:bottom-20 md:right-20 bg-accent text-accent-foreground font-mono text-sm md:text-base uppercase tracking-widest px-8 py-4 md:px-10 md:py-5 border-2 border-foreground rotate-[-8deg] hover:rotate-0 transition-transform duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+        className="absolute bottom-12 right-12 md:bottom-20 md:right-20 bg-accent text-accent-foreground font-mono text-sm md:text-base uppercase tracking-widest px-8 py-4 md:px-10 md:py-5 border-2 border-foreground rotate-[-8deg] hover:rotate-0 transition-transform duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2"
       >
         Enter
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="16" 
+          height="16" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="3" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
       </a>
 
       {/* Small floating tag */}
